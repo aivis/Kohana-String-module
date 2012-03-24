@@ -6,17 +6,15 @@
 class String {
 	
 	/**
-	 * Holds input string
-	 *
 	 * @var string
 	 */
 	protected $string;
 
 	/**
-	 * Factory for chaining
+	 * Create instance
 	 * 
 	 * @param string $string
-	 * @return String
+	 * @return object String
 	 */
 	public static function i($string) {
 		return new String($string);
@@ -28,6 +26,24 @@ class String {
 	 * @param string $string
 	 */
 	public function __construct($string) {
-		$this->string = $string;
+		$this->set($string);
 	}
+
+	/**
+	 * Escape string
+	 */
+	public function xss() {
+		return $this->set(htmlspecialchars($this->string));
+	}
+
+	/**
+	 * Set new string
+	 *
+	 * @param string
+	 * @return string
+	 */
+	protected function set($string) {
+		return $this->string = $string;
+	}
+
 }
