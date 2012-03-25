@@ -26,5 +26,19 @@ class Kohana_StringTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(I18n::get('test.test'), String::i('test.test'));
 
 	}
+	
+	/**
+	 * Test anchor method
+	 */
+	public function test_anchor() {
 
+		$uri = '/test/west/';
+		$attributes = array('class' => 'test');
+
+		$this->assertEquals(
+			Html::anchor($uri, $this->string, $attributes), 
+			String::i($this->string)->to_anchor($uri, $attributes)
+		);
+
+	}
 }

@@ -95,5 +95,18 @@ abstract class Kohana_String {
 		return $this->set(I18n::get($this->string, $lang));
 
 	}
+
+	/**
+	 * Create html <a> tag where title is current string
+	 *
+	 * @param string $url
+	 * @param array $attributes 
+	 * @return String
+	 */
+	public function to_anchor($url, array $attributes = null) {
+
+		return $this->set(Html::anchor($url, $this->string, $attributes));
+
+	}
 	
 }
