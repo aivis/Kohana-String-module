@@ -1,5 +1,10 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+  * Wrapper class for common string functions & Kohana helpers
+  *
+  * @author Aivis Silins
+ */
 abstract class Kohana_String {
 
 	/**
