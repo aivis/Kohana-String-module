@@ -20,13 +20,13 @@ abstract class Kohana_String {
 	}
 
 	/**
-	 * Set string to $string property
+	 * Set string
 	 *
 	 * @param string $string
 	 */
 	public function __construct($string) {
 
-		$this->string = $string;
+		$this->set($string);
 
 	}
 
@@ -34,6 +34,30 @@ abstract class Kohana_String {
 	 * @return string
 	 */
 	public function __toString() {
+
+		return $this->get();
+
+	}
+
+	/**
+	 * Set string to $string property
+	 *
+	 * @param string $string
+	 * @return String
+	 */
+	public function set($string) {
+
+		$this->string = $string;
+		return $this;
+
+	}
+
+	/**
+	 * Return object string
+	 *
+	 * @return string
+	 */
+	public function get() {
 
 		return $this->string;
 
@@ -46,8 +70,29 @@ abstract class Kohana_String {
 	 */
 	public function ucfirst() {
 
-		$this->string = ucfirst($this->string);
-		return $this;
+		return $this->set(ucfirst($this->string));
+
+	}
+
+	/**
+	 * Escape string
+	 *
+	 * @return String
+	 */
+	public function escape() {
+
+		return $this->set(htmlspecialchars($this->string));
+
+	}
+
+	/**
+	 * Translate string with Kohana i18n class
+	 *
+	 * @return String
+	 */
+	public function i18n($lang = null) {
+
+		return $this->set(I18n::get($this->string, $lang));
 
 	}
 	
