@@ -16,8 +16,15 @@ class Kohana_StringTest extends PHPUnit_Framework_TestCase {
 
 		$this->assertEquals(ucfirst($this->string), String::i($this->string)->ucfirst());
 
-		
-		
+	}
+
+	/**
+	 * Test i18n method
+	 */
+	public function test_i18n() {
+
+		$this->assertEquals(I18n::get('test.test'), String::i('test.test'));
+
 	}
 
 }
