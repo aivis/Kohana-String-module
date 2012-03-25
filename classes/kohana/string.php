@@ -108,5 +108,19 @@ abstract class Kohana_String {
 		return $this->set(Html::anchor($url, $this->string, $attributes));
 
 	}
-	
+
+	/**
+	 * Create html for input where 'value' is current string
+	 *
+	 * @param string $name
+	 * @param string $type
+	 * @param string $attributes
+	 * @return String
+	 */
+	public function to_input($name, $type = 'text', $attributes = array()) {
+
+		$attributes['type'] = $type;
+		return $this->set(Form::input($name, $this->string, $attributes)); 	
+
+	}
 }

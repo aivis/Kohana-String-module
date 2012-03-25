@@ -41,4 +41,19 @@ class Kohana_StringTest extends PHPUnit_Framework_TestCase {
 		);
 
 	}
+
+	/**
+	 * Test form input method
+	 */
+	public function test_to_input() {
+
+		$name = 'test';
+		$attributes = array('class' => 'login');
+
+		$this->assertEquals(
+			Form::hidden($name, $this->string, $attributes),
+			String::i($this->string)->to_input($name, 'hidden', $attributes)
+		);
+
+	}
 }
