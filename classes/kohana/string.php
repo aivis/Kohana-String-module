@@ -130,4 +130,17 @@ abstract class Kohana_String {
 		return $this->set(Form::input($name, $this->string, $attributes)); 	
 
 	}
+
+	/**
+	 * Limit string
+	 *
+	 * @param int $length
+	 * @param string $string_end
+	 * @return String
+	 */
+	public function limit($length, $string_end = '...') {
+
+		return $this->set(substr($this->string, 0, $length).$string_end);
+
+	}
 }

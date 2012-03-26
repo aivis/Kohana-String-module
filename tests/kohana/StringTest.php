@@ -56,4 +56,16 @@ class Kohana_StringTest extends PHPUnit_Framework_TestCase {
 		);
 
 	}
+
+	/**
+	 * Test limit method
+	 */
+	public function test_limit() {
+
+		$expected_string = 'tes...';
+
+		$this->assertEquals($expected_string, String::i('test')->limit(3));
+
+	}
+
 }
