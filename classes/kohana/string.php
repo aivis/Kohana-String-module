@@ -93,11 +93,13 @@ abstract class Kohana_String {
 	/**
 	 * Translate string with Kohana i18n class
 	 *
+	 * @param array $values
+	 * @param string $lang
 	 * @return String
 	 */
-	public function i18n($lang = null) {
+	public function i18n(array $values = null, $lang = 'en-us') {
 
-		return $this->set(I18n::get($this->string, $lang));
+		return $this->set(__($this->string, $values, $lang));
 
 	}
 
