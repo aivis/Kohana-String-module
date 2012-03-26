@@ -68,4 +68,14 @@ class Kohana_StringTest extends PHPUnit_Framework_TestCase {
 
 	}
 
+	/**
+	 * Trim test
+	 */
+	public function test_trim() {
+
+		$expected_string = 'test';
+		$this->assertEquals($expected_string, String::i('  test      ')->trim());
+
+	}
+
 }

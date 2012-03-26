@@ -143,4 +143,15 @@ abstract class Kohana_String {
 		return $this->set(substr($this->string, 0, $length).$string_end);
 
 	}
+
+	/**
+	 * Strip whitespaces around string
+	 * 
+	 * @return String
+	 */
+	public function trim() {
+
+		return $this->set(trim($this->string));
+
+	}
 }
