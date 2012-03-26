@@ -30,9 +30,9 @@ Quick start:
 Add following line at bootstrap.php file:
 ```php
 Kohana::modules(array(
-    //...
+	//...
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'string'		=> MODPATH.'string',
+	'string'		=> MODPATH.'string'
 ));
 ```
 
