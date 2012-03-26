@@ -5,6 +5,7 @@ Wrapper class for common functions & Kohana helpers.
 All methods are chainable.
 
 ```php
+    <?php
     //$user->name - e.g. orm property
     echo String::i($user->name)->escape()->to_input('name');
     //output: <input type="text" name="name" value="Escaped user name" />
