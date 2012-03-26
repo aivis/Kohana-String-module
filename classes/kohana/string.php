@@ -64,7 +64,7 @@ abstract class Kohana_String {
 	 */
 	public function get() {
 
-		return $this->string;
+		return (string)$this->string;
 
 	}
 
@@ -154,4 +154,5 @@ abstract class Kohana_String {
 		return $this->set(trim($this->string));
 
 	}
+
 }
