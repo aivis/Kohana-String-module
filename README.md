@@ -27,13 +27,9 @@ Current methods:
 
 Quick start:
 ------------
-Add following line at bootstrap.php file:
+Add following line at bootstrap.php file in modules array "Kohana::modules(array());"
 ```php
-Kohana::modules(array(
-	//...
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'string'		=> MODPATH.'string'
-));
+'string'		=> MODPATH.'string'
 ```
 
 
