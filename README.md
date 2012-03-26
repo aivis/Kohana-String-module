@@ -12,8 +12,4 @@ All methods are chainable.
     echo String::i($title)->i18n()->ucfirst()->limit(46)->to_anchor('my/action');
     //output: <a href="my/action">Translated title with first letter in upperca...</a>
 
-Use like a kohana submodule:
-    git submodule add git@github.com:aivis/Kohana-String-module.git modules/string
-    git submodule init
-    git submodule update
 
