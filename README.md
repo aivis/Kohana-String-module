@@ -20,8 +20,26 @@ Current methods:
 * ucfirst() - Make a string first letter to uppercase
 * escape()  - Escape string (XSS)
 * i18n(array $values = null, $lang = 'en-us')   - Translate string with Kohana i18n class
-* to_anchor($url, array $attributes = null)     - Create html <a> tag where title is current string
+* to_anchor($url, array $attributes = null)     - Create html a tag where title is current string
 * to_input($name, $type = 'text', $attributes = array()) - Create html for input where 'value' is current string
 * limit($length, $string_end = '...') - Limit string
 * trim() - Strip whitespaces around string
+
+Quick start:
+------------
+Add following line at bootstrap.php file:
+```php
+Kohana::modules(array(
+    //...
+	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'string'		=> MODPATH.'string',
+));
+```
+
+
+Use like a Git submodule:
+-------------------------
+* git submodule add git@github.com:aivis/Kohana-String-module.git modules/string
+* git submodule init
+* git submodule update
 
