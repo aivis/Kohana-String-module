@@ -139,8 +139,12 @@ abstract class Kohana_String {
 	 * @return String
 	 */
 	public function limit($length, $string_end = '...') {
+		
+		if (strlen($this->string) >= $length) {
+			return $this->set(substr($this->string, 0, $length).$string_end);
+		}
 
-		return $this->set(substr($this->string, 0, $length).$string_end);
+		return $this;
 
 	}
 
